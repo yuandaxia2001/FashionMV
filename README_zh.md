@@ -1,10 +1,41 @@
 [English](README.md) | **中文**
 
-# FashionMV: 基于多视角时尚数据的商品级组合图像检索
+<h1 align="center">FashionMV: 基于多视角时尚数据的产品级组合图像检索</h1>
 
-**FashionMV** 官方代码。
+<p align="center">
+    <a href="https://arxiv.org/abs/2604.10297">
+        <img alt="Paper" src="http://img.shields.io/badge/cs.CV-arXiv%3A2604.10297-B31B1B.svg">
+    </a>
+    <a href="https://github.com/yuandaxia2001/FashionMV">
+        <img alt="Code" src="https://img.shields.io/badge/Github-Code-blue">
+    </a>
+    <a href="https://huggingface.co/datasets/yuandaxia/FashionMV">
+        <img alt="Datasets" src="https://img.shields.io/badge/🤗 Datasets-FashionMV-yellow">
+    </a>
+    <a href="https://huggingface.co/yuandaxia/ProCIR">
+        <img alt="Model" src="https://img.shields.io/badge/🤗 Model-ProCIR-yellow">
+    </a>
+</p>
 
-[[论文 (arXiv)]](https://arxiv.org/abs/2604.10297) | [[数据集 (Hugging Face)]](https://huggingface.co/datasets/yuandaxia/FashionMV) | [[模型 (Hugging Face)]](https://huggingface.co/yuandaxia/ProCIR)
+## 最新动态
+
+```2026-04-14``` 🚀🚀 发布 **ProCIR** 代码。在 Hugging Face 上发布 **ProCIR** (0.8B) 模型和完整的 **FashionMV** 数据集标注。
+```2026-04-11``` 🎉🎉 发布论文：FashionMV: 面向产品级别的组合图像检索与多视角时尚数据
+
+## 发布计划
+
+- [x] 论文发布
+- [x] FashionMV 数据集（训练集/验证集三元组与图像描述）
+- [x] ProCIR 模型权重 (Checkpoint)
+- [x] 数据准备与评估代码
+- [ ] 训练代码（即将推出）
+
+## 简介
+我们发现“视角不完整性 (View Incompleteness)”是现有组合图像检索 (CIR) 方法中的一个根本性局限，并通过正式定义多视角 CIR (Multi-View CIR) 任务来解决这一问题。为此，我们提出了两项主要贡献：
+- **FashionMV**：首个专门为产品级 CIR 设计的大规模多视角时尚数据集，通过全自动的三阶段流水线构建。
+- **ProCIR**：一种将预训练 MLLM（多模态大语言模型）的生成能力迁移到检索任务的建模框架。它依赖于三个核心机制：两阶段对话架构 (two-stage dialogue architecture)、基于描述的对齐 (caption-based alignment) 和思维链 (CoT) 引导。
+
+我们的分析表明，两阶段对话架构是实现有效的基于描述的对齐的必要前提，而该对齐机制是将产品知识注入模型的最关键的单一机制。
 
 ## 数据构造流程
 
@@ -209,6 +240,9 @@ ProCIR (0.8B)：
 }
 ```
 
-## 许可证
+## 开源协议
 
-代码：MIT 许可证。模型权重：遵循 Qwen3.5 许可证。数据标注：CC BY-NC 4.0。图像需从原始数据源获取，遵循其各自的许可协议。
+- **代码：** [MIT License](LICENSE)。
+- **模型权重：** 遵循原始的 Qwen3.5 开源协议。
+- **数据集标注：** [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)。
+- **图像：** 必须从原始数据源获取，并受其各自的开源协议约束。

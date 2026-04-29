@@ -1,10 +1,42 @@
 **English** | [中文](README_zh.md)
 
-# FashionMV: Product-Level Composed Image Retrieval with Multi-View Fashion Data
+<h1 align="center">FashionMV: Product-Level Composed Image Retrieval with Multi-View Fashion Data</h1>
 
-Official code for **FashionMV**.
+<p align="center">
+    <a href="https://arxiv.org/abs/2604.10297">
+        <img alt="Paper" src="http://img.shields.io/badge/cs.CV-arXiv%3A2604.10297-B31B1B.svg">
+    </a>
+    <a href="https://github.com/yuandaxia2001/FashionMV">
+        <img alt="Code" src="https://img.shields.io/badge/Github-Code-blue">
+    </a>
+    <a href="https://huggingface.co/datasets/yuandaxia/FashionMV">
+        <img alt="Datasets" src="https://img.shields.io/badge/🤗 Datasets-FashionMV-yellow">
+    </a>
+    <a href="https://huggingface.co/yuandaxia/ProCIR">
+        <img alt="Model" src="https://img.shields.io/badge/🤗 Model-ProCIR-yellow">
+    </a>
+</p>
 
-[[Paper (arXiv)]](https://arxiv.org/abs/2604.10297) | [[Dataset (Hugging Face)]](https://huggingface.co/datasets/yuandaxia/FashionMV) | [[Model (Hugging Face)]](https://huggingface.co/yuandaxia/ProCIR)
+## News
+```2026-04-14``` 🚀🚀 Release of **ProCIR** code. Release of **ProCIR** (0.8B) model and full **FashionMV** dataset annotations on Hugging Face.
+
+```2026-04-11``` 🎉🎉 Release our paper: [FashionMV: Product-Level Composed Image Retrieval with Multi-View Fashion Data](https://arxiv.org/abs/2604.10297)
+
+## Release Plan
+
+- [x] Paper Release
+- [x] FashionMV Dataset (Train/Val Triplets & Captions)
+- [x] ProCIR Model Checkpoint
+- [x] Data Preparation & Evaluation Code
+- [ ] Training Code (Coming Soon)
+
+## Introduction
+We identify "View Incompleteness" as a fundamental limitation in existing Composed Image Retrieval (CIR) methods and address it by formally defining the Multi-View CIR task. To support this, we introduce two main contributions:
+- **FashionMV**: The first large-scale multi-view fashion dataset specifically designed for product-level CIR, constructed through a fully automated three-stage pipeline.
+- **ProCIR**: A modeling framework that transfers a pre-trained MLLM’s generative capabilities to retrieval tasks. It relies on three core mechanisms: a two-stage dialogue architecture, caption-based alignment, and chain-of-thought (CoT) guidance.
+
+Our analysis demonstrates that the two-stage dialogue architecture is an essential prerequisite for effective caption-based alignment, which serves as the single most critical mechanism for injecting product knowledge into the model.
+
 
 ## Data Construction Pipeline
 
@@ -209,6 +241,10 @@ ProCIR (0.8B):
 }
 ```
 
+
 ## License
 
-Code: MIT License. Model weights: subject to the Qwen3.5 license. Dataset annotations: CC BY-NC 4.0. Images must be obtained from original sources under their respective licenses.
+- **Code:** [MIT License](LICENSE).
+- **Model Weights:** Subject to the original Qwen3.5 license.
+- **Dataset Annotations:** [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
+- **Images:** Must be obtained from their original sources and are governed by their respective licenses.
